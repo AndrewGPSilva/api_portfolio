@@ -1,0 +1,8 @@
+CREATE TABLE projetos (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    titulo VARCHAR(255) NOT NULL,
+    descricao TEXT NOT NULL,
+    link VARCHAR(255) NOT NULL,
+
+    PRIMARY KEY (id)
+);
