@@ -24,8 +24,9 @@ public class ProjetoController {
 
     @PostMapping("/api/projetos")
     @Transactional
-    public Projeto create(@RequestBody Projeto projeto) {
-        return repository.save(projeto);
+    public ResponseEntity<Projeto> create(@RequestBody Projeto projeto) {
+        repository.save(projeto);
+        return ResponseEntity.ok(projeto);
     }
 
     @GetMapping("/api/projetos/{id}")
